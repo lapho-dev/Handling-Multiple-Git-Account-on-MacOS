@@ -5,20 +5,43 @@
 
 When managing several git account with different ssh keys, you might struggle a bit with setting ssh keys, username and user email. 
 
-This guide is aiming to provide a complete precedure to set up ssh connection to git repository for **macOS** users.
+This guide is aiming to provide complete precedures to set up ssh connection to git repository for **macOS** users.
 
 For linux users, this guide would be mostly applicable.
 For windows users, commands would be different.
 
-## Prerequisite
+## Table of Content
 
-You would need the following
-- Have a Git account (we will using github as an example)
+- Basic SSH Connection (#Setting Up SSH Connection)
+- Multiple Git Account & SSH 
 
 
-## 1 Generating SSH keys
+## Setting Up SSH Connection
 
-- op
+### Generating SSH keys
+
+- open terminal 
+- or Hold */Commnand + Space/* and type */terminal/*
+
+Copy and paste following command to generate ssh keys pairs
+```
+ssh-keygens -t ed25519 -C "{your_email.com}" -f ~/.ssh/{ssh_key_name}
+```
+
+Replace {your_email.com} with your email or a comment
+Replace {ssh_key_name} with a desired name for the key
+*Note that ssh_key_name is needed later for identifying corresponding account.
+
+Press y & enter pass-phrase if needed
+
+In ~/.ssh folder, you will find two keys namely
+1. ssh_key_name
+2. ssh_key_name.pub
+
+### Adding SSH Key to Git Account
+
+Copy ssh_key_name.pub 
+
 
 ## Add your files
 
