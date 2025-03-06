@@ -1,12 +1,24 @@
-# Macos Multiple Git Account Settings
+# Guide for Multiple Git Account on MacOS
 
 
+## Prelude
 
-## Getting started
+When managing several git account with different ssh keys, you might struggle a bit with setting ssh keys, username and user email. 
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+This guide is aiming to provide a complete precedure to set up ssh connection to git repository for **macOS** users.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+For linux users, this guide would be mostly applicable.
+For windows users, commands would be different.
+
+## Prerequisite
+
+You would need the following
+- Have a Git account (we will using github as an example)
+
+
+## 1 Generating SSH keys
+
+- op
 
 ## Add your files
 
