@@ -238,8 +238,8 @@ You should have a directory tree looking like this :
 | -- Downloads..., etc  
 | -- [.gitconfig](#your-gitconfig-file-should-look-something-like-this)  
 | -- .ssh   
-    | -- [config](#your-sshconfig-file-should-look-something-like-this)   
-    | --     
+&nbsp;&nbsp;&nbsp;&nbsp;| -- [config](#your-sshconfig-file-should-look-something-like-this)   
+&nbsp;&nbsp;&nbsp;&nbsp;| --     
 | -- dev    
     | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
     | -- AI-model   
@@ -263,7 +263,7 @@ You should have a directory tree looking like this :
             ...    
         ...    
 ...    
-   
+
 
 
 
