@@ -14,7 +14,7 @@ For windows users, commands would be different.
 
 - [Basic SSH Connection](#setting-up-ssh-connection)                       -- Read from here if you are new
 - [Multiple Git Account & SSH](#seting-up-multiple-ssh-keys--git-account)  -- Skip here if you already know git ssh
-- [Directory Tree - example](#directory-tree)                              -- Useful for double checking
+- [Directory Tree - example](#example-directory-tree)                              -- Useful for double checking
 
 
 ## Setting Up SSH Connection
