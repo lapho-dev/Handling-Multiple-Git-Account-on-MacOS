@@ -238,14 +238,14 @@ You should have a directory tree looking like this :
 | -- Downloads..., etc  
 | -- [.gitconfig](#your-gitconfig-file-should-look-something-like-this)  
 | -- .ssh   
-&ensp;| -- [config](#your-sshconfig-file-should-look-something-like-this)   
-&ensp;| --     
+&ensp;&ensp;&ensp;&ensp;| -- [config](#your-sshconfig-file-should-look-something-like-this)   
+&ensp;&ensp;&ensp;&ensp;| --     
 | -- dev    
-&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
-&ensp;| -- AI-model   
-&ensp;&ensp;| -- .git      
-&ensp;&ensp;| -- README.md   
-&ensp;&ensp;...   
+&ensp;&ensp;&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
+&ensp;&ensp;&ensp;&ensp;| -- AI-model   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- .git      
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- README.md   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;...   
 | -- git-project   
 &ensp;| -- personal   
 &ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
