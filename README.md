@@ -12,13 +12,13 @@ For windows users, commands would be different.
 
 ## Table of Content
 
-- Basic SSH Connection (#Setting Up SSH Connection)
-- Multiple Git Account & SSH 
+- [Basic SSH Connection](#setting-up-ssh-connection)  
+- [Multiple Git Account & SSH](#seting-up-multiple-ssh-keys--git-account)  -- Skip here if you already know
 
 
 ## Setting Up SSH Connection
 
-### Generating SSH keys
+### 1.1 Generating SSH keys
 
 - open terminal 
 - or Hold */Commnand + Space/* and type */terminal/*
@@ -28,101 +28,91 @@ Copy and paste following command to generate ssh keys pairs
 ssh-keygens -t ed25519 -C "{your_email.com}" -f ~/.ssh/{ssh_key_name}
 ```
 
-Replace {your_email.com} with your email or a comment
-Replace {ssh_key_name} with a desired name for the key
+*Replace {your_email.com} with your email or a comment
+
+*Replace {ssh_key_name} with a desired name for the key
+
 *Note that ssh_key_name is needed later for identifying corresponding account.
 
-Press y & enter pass-phrase if needed
+**Press y & enter pass-phrase if needed**
 
-In ~/.ssh folder, you will find two keys namely
-1. ssh_key_name
-2. ssh_key_name.pub
-
-### Adding SSH Key to Git Account
-
-Copy ssh_key_name.pub 
-
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+- In ~/.ssh folder, you will find two keys namely
+1. */ssh_key_name/*
+2. */ssh_key_name.pub/*
+- Or enter following command
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/lyh-dev/macos-multiple-git-account-settings.git
-git branch -M main
-git push -uf origin main
+cd .ssh/ && ls
 ```
 
-## Integrate with your tools
+### 1.2 Adding SSH Key to Git Account
 
-- [ ] [Set up project integrations](https://gitlab.com/lyh-dev/macos-multiple-git-account-settings/-/settings/integrations)
+- Copy */ssh_key_name.pub/*
+- Or user following command and copy
+```
+cd .ssh/ && ls
+```
+```
+cat ssh_key_name.pub
+```
 
-## Collaborate with your team
+**Add the */ssh_key_name.pub/* to the Git Account**
+In **git account** -> open **Setting** -> **SSH Keys** -> **Add New key** -> paste */ssh_key_name.pub/*
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Save and you have your ssh connected
 
-## Test and Deploy
+### 1.3 Test and Enjoy
 
-Use the built-in continuous integration in GitLab.
+You can easily clone repository with
+```
+git clone git@github.com:lapho-dev/Handling-Multiple-Git-Account-on-MacOS.git
+```
+other git commands can be found in [git documentation](https://git-scm.com/docs).
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+#### Additionally, you can test the connection by following
+```
+ssh -T {your repo ssh link}
+```
+for exmaple 
+```
+ssh -T git@github.com:lapho-dev/Handling-Multiple-Git-Account-on-MacOS.git
+```
 
-***
+## Seting Up Multiple SSH keys & Git Account
 
-# Editing this README
+Now that you have single connection set up, dealing with multiple git account and ssh keys may require further settings.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### 2.1 Knowing Authentication requirements
 
-## Suggestions for a good README
+To authenticate succesfully in each git command, the following must be present for each account
+| Your Computer | Git Account | description |
+| -- | -- | -- |
+| */ssh_key_name/* | */ssh_key_name.pub/* | ssh key are paired |
+| email | email | same
+| username | email | same |
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+To achieve that, we first need to create several ssh keys.
 
-## Name
-Choose a self-explaining name for your project.
+### 2.2 SSH Configuration
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Repeat the steps in [1.1](#11-generating-ssh-keys) & [1.2](#12-adding-ssh-key-to-git-account) with different names.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+By default, the computer does not know which key to use each time.
+Therefore, we need to create a config file for ssh
+```
+cd ~/.ssh && nano config
+```
+* if this is your first time doing this, the config file should be blank
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Paste the following template to the file
+```
+Host ssh_key_name
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/ssh_key_name
+    IdentitiesOnly yes
+```
+For each ssh key you generate, 
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Thanks
