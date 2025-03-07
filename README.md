@@ -118,7 +118,7 @@ Host ssh_key_name
 
 For each ssh key you generate, insert another Host Alias in ~/.ssh/config.
 
-Your ~/.ssh/config file should look something like this:
+###### Your ~/.ssh/config file should look something like this:
 ```config
 Host dev-github
     HostName github.com
@@ -177,7 +177,7 @@ This allows git command to use local .gitconfig file in all the directory inside
 
 Repeat until you've covered all of your directory.
 
-Your ~/.gitconfig file should look something like this:
+###### Your ~/.gitconfig file should look something like this:
 ```.gitconfig
 [user]
     name = your_global_username
@@ -199,11 +199,12 @@ For example:
 cd ~/dev
 ```
 
-In [previous step](./README.md#L183), we point every git command inside *~/dev/...* to use *~/dev/.gitconfig* .   
+In [previous step](#your-gitconfig-file-should-look-something-like-this), we point every git command inside *~/dev/...* to use *~/dev/.gitconfig* .   
 Now, we could simply create a *.gitconfig* file for local git config for *~/dev/...* :
 ```zsh
 nano .gitconfig
 ```
+###### In *.gitconfig*, paste the following content depending on your actual user and [Host Name](#your-sshconfig-file-should-look-something-like-this) previous defined.
 ```
 [user]
     name = your_local_username
@@ -213,7 +214,7 @@ nano .gitconfig
 [url "git@dev-gitlab:"]
     insteadOf = git@gitlab.com:
 ```
-This replaces git@github.com with the host name in *~/.ssh/config* file, which means the correct ssh keys in used.  
+This replaces git@github.com with the host name in *~/.ssh/config* file, which means the correct ssh keys is used.  
 Local user is also correctly set up.
 
 Repeat [the steps](#24-configure-local-gitconfig) to cover all the git folder you have.
@@ -231,13 +232,38 @@ If you encounter any authentication error, permission denied, either you don't h
 
 ### Example Directory Tree
 
-You should have a directory tree like this regarding :  
+You should have a directory tree looking like this :  
 ~/  
-| -- .gitconfig  
 | -- Desktop  
 | -- Downloads..., etc  
+| -- [.gitconfig](#your-gitconfig-file-should-look-something-like-this)  
+| -- .ssh  
+   | -- [config](#your-sshconfig-file-should-look-something-like-this)  
+   | -- 
 | -- dev  
-| -- gi  
+   | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)  
+   | -- AI-model
+      | -- .git
+      | -- README.md
+        ...
+| -- git-project  
+   | -- personal  
+      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)  
+      | -- personal-webapp-repo  
+         | -- .git  
+         | -- README.md  
+           ...  
+| -- work  
+   | -- boring-work-files  
+   | -- work-git  
+      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)  
+      | -- work-git-repos
+         | -- .git
+         | -- README.md
+           ...   
+        ...   
+  ...   
+
 
 
 
