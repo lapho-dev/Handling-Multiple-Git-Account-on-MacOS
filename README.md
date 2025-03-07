@@ -238,21 +238,21 @@ You should have a directory tree looking like this :
 | -- Downloads..., etc  
 | -- [.gitconfig](#your-gitconfig-file-should-look-something-like-this)  
 | -- .ssh   
-   | -- [config](#your-sshconfig-file-should-look-something-like-this)   
-   | --     
+|  | -- [config](#your-sshconfig-file-should-look-something-like-this)   
+|  | --     
 | -- dev    
-   | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
-   | -- AI-model   
-      | -- .git   
-      | -- README.md   
-        ...   
+|  | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
+|  | -- AI-model   
+|     | -- .git   
+|     | -- README.md   
+|       ...   
 | -- git-project   
-   | -- personal   
-      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
-      | -- personal-webapp-repo   
-         | -- .git   
-         | -- README.md   
-           ...   
+|  | -- personal   
+|     | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+|     | -- personal-webapp-repo   
+|        | -- .git   
+|        | -- README.md   
+|          ...   
 | -- work   
    | -- boring-work-files    
    | -- work-git   
