@@ -222,22 +222,22 @@ The no. of local *.gitconfig* should be the same as no. of [includeIf ...]... in
 
 ## Summary
 
-Now that you have everything set up, you don't need to bother switching account and ssh keys. **Everything is Automatic!**
+Now that you have everything set up, you don't need to bother switching account and ssh keys.   
+**Everything is Automatic!**
 
-[Test](#additionally-you-can-test-the-connection-by-following) the connection in different directory.  
-You will see a response in different user.
+[Test](#additionally-you-can-test-the-connection-by-following) the connection in different directory. You will see a response in different user.
 
 If you encounter any authentication error, permission denied, either you don't have network access to the server or your credentials listed [here](#21-knowing-authentication-requirements) aren't matched.
 
 ### Example Directory Tree
 
-You should have a directory tree like this regarding :
-~/
-| -- .gitconfig
-| -- Desktop
-| -- Downloads..., etc
-| -- dev
-| -- gi
+You should have a directory tree like this regarding :  
+~/  
+| -- .gitconfig  
+| -- Desktop  
+| -- Downloads..., etc  
+| -- dev  
+| -- gi  
 
 
 
