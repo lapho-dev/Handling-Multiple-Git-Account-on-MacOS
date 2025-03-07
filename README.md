@@ -238,30 +238,30 @@ You should have a directory tree looking like this :
 | -- Downloads..., etc  
 | -- [.gitconfig](#your-gitconfig-file-should-look-something-like-this)  
 | -- .ssh   
-&nbsp;&nbsp;&nbsp;&nbsp;| -- [config](#your-sshconfig-file-should-look-something-like-this)   
-&nbsp;&nbsp;&nbsp;&nbsp;| --     
+&ensp;| -- [config](#your-sshconfig-file-should-look-something-like-this)   
+&ensp;| --     
 | -- dev    
-    | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
-    | -- AI-model   
-        | -- .git      
-        | -- README.md   
-        ...   
+&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
+&ensp;| -- AI-model   
+&ensp;&ensp;| -- .git      
+&ensp;&ensp;| -- README.md   
+&ensp;&ensp;...   
 | -- git-project   
-    | -- personal   
-        | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
-        | -- personal-webapp-repo   
-            | -- .git   
-            | -- README.md   
-            ...   
+&ensp;| -- personal   
+&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+&ensp;&ensp;| -- personal-webapp-repo   
+&ensp;&ensp;&ensp;| -- .git   
+&ensp;&ensp;&ensp;| -- README.md   
+&ensp;&ensp;&ensp;...   
 | -- work   
-    | -- boring-work-files    
-    | -- work-git   
-        | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
-        | -- work-git-repos   
-            | -- .git   
-            | -- README.md    
-            ...    
-        ...    
+&ensp;| -- boring-work-files    
+&ensp;| -- work-git   
+&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+&ensp;&ensp;| -- work-git-repos   
+&ensp;&ensp;&ensp;| -- .git   
+&ensp;&ensp;&ensp;| -- README.md    
+&ensp;&ensp;&ensp;...    
+&ensp;...    
 ...    
 
 
