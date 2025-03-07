@@ -232,38 +232,38 @@ If you encounter any authentication error, permission denied, either you don't h
 
 ### Example Directory Tree
 
-You should have a directory tree looking like this :  
-~/  
+You should have a directory tree looking like this :    
+~/    
 | -- Desktop  
 | -- Downloads..., etc  
 | -- [.gitconfig](#your-gitconfig-file-should-look-something-like-this)  
-| -- .ssh  
-   | -- [config](#your-sshconfig-file-should-look-something-like-this)  
-   | -- 
-| -- dev  
-   | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)  
-   | -- AI-model
-      | -- .git
-      | -- README.md
-        ...
-| -- git-project  
-   | -- personal  
-      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)  
-      | -- personal-webapp-repo  
-         | -- .git  
-         | -- README.md  
-           ...  
-| -- work  
-   | -- boring-work-files  
-   | -- work-git  
-      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)  
-      | -- work-git-repos
-         | -- .git
-         | -- README.md
-           ...   
+| -- .ssh   
+   | -- [config](#your-sshconfig-file-should-look-something-like-this)   
+   | --     
+| -- dev    
+   | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)   
+   | -- AI-model   
+      | -- .git   
+      | -- README.md   
         ...   
-  ...   
-
+| -- git-project   
+   | -- personal   
+      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+      | -- personal-webapp-repo   
+         | -- .git   
+         | -- README.md   
+           ...   
+| -- work   
+   | -- boring-work-files    
+   | -- work-git   
+      | -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+      | -- work-git-repos   
+         | -- .git   
+         | -- README.md    
+           ...    
+        ...    
+  ...    
+   
 
 
 
