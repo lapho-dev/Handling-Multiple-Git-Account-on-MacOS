@@ -247,21 +247,21 @@ You should have a directory tree looking like this :
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- README.md   
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;...   
 | -- git-project   
-&ensp;| -- personal   
-&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
-&ensp;&ensp;| -- personal-webapp-repo   
-&ensp;&ensp;&ensp;| -- .git   
-&ensp;&ensp;&ensp;| -- README.md   
-&ensp;&ensp;&ensp;...   
+&ensp;&ensp;&ensp;&ensp;| -- personal   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- personal-webapp-repo   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- .git   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- README.md   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;...   
 | -- work   
-&ensp;| -- boring-work-files    
-&ensp;| -- work-git   
-&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
-&ensp;&ensp;| -- work-git-repos   
-&ensp;&ensp;&ensp;| -- .git   
-&ensp;&ensp;&ensp;| -- README.md    
-&ensp;&ensp;&ensp;...    
-&ensp;...    
+&ensp;&ensp;&ensp;&ensp;| -- boring-work-files    
+&ensp;&ensp;&ensp;&ensp;| -- work-git   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- [.gitconfig](#in-gitconfig-paste-the-following-content-depending-on-your-actual-user-and-host-name-previous-defined)    
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- work-git-repos   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- .git   
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;| -- README.md    
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;...    
+&ensp;&ensp;&ensp;&ensp;...    
 ...    
 
 
