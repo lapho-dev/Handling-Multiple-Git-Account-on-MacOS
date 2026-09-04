@@ -26,12 +26,13 @@ For windows users, commands would be different.
 
 Copy and paste following command to generate ssh keys pairs.
 ```zsh
-ssh-keygens -C "{your_email.com}" -f ~/.ssh/{ssh_key_name}
+ssh-keygens -C "{your_email.com}" -f ~/.ssh/{ssh_key_name} -t ed25519
 ```
 
 *Replace {your_email.com} with your email or a comment.  
 *Replace {ssh_key_name} with a desired name for the key.  
-*Note that ssh_key_name is needed later for identifying corresponding account.  
+*Note that ssh_key_name is needed later for identifying corresponding account. 
+*"-t ed25519" is optional; you can replace with other key type.
 
 **Press y & enter pass-phrase if needed**
 
